@@ -2,7 +2,7 @@ FROM alpine:3.16
 
 # Install samba
 RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add bash samba=4.15.7-r0 shadow tini tzdata && \
+    apk --no-cache --no-progress add bash samba=4.15.13-r0 shadow tini tzdata && \
     addgroup -S smb && \
     adduser -S -D -H -h /tmp -s /sbin/nologin -G smb -g 'Samba User' smbuser &&\
     file="/etc/samba/smb.conf" && \
